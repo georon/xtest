@@ -1,21 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from "react";
+import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import ImagePickerExample from "./ImagePickerExample";
+class App extends Component {
+  state = {
+    count: 0,
+  };
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  onPress = () => {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  };
+
+  render() {
+    return <ImagePickerExample />;
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  button: {
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10,
+    marginBottom: 10,
   },
 });
+
+export default App;
