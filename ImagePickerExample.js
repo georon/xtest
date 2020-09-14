@@ -68,7 +68,7 @@ export default class ImagePickerExample extends React.Component {
     if (imageuri != null) {
       var options = {
         method: "POST",
-        hostname: "api.101ventures.ltd",
+        hostname: "api.myserver.xyz",
         path: "/imgupload/idcard",
         headers: {},
         maxRedirects: 20,
